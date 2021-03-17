@@ -1,0 +1,45 @@
+
+<div class="container">
+    <hr>
+    <div class="titulo">
+        <h2>Saiba mais Sobre o filme que você quer assitir!</h2>
+        <p class="sub-titulo">Aqui você descobre varias informações sobre o seu filme favorito <br> como o diretor, quantas reviews ele tem e até a sinopse do filme</p>
+    </div>
+
+
+
+<div class= "input-group mb-3" >
+        <input class="form-control form-control" type="text" placeholder="Pesquisar Filme" (keyup)="getFilme($event)">
+        <i class="input-group-text bi bi-search"></i>
+</div>
+
+
+<div class="row justify-content-center">
+<div class="col-sm-5" *ngFor="let filme of filmes">
+<div class="card mb-2 ">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card-body justify-content-center">
+          <h5 class="card-title">{{filme['Title']}}</h5>
+          <p class="card-text">Ano: {{filme['Year']}}</p>
+        </div>
+        
+      </div>
+      <div class="col-md-4">
+        <img class="rounded img-fluid d-block" [src]="filme['Poster']" alt="...">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 
+<div>
+    <ul *ngFor="let filme of filmes">
+        <img [src]="filme['Poster']">
+        <li>{{filme['Title']}}</li>
+        <li>{{filme['Writer']}}</li>
+    </ul>
+</div> -->
+
+</div>
